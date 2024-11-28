@@ -20,6 +20,7 @@ public class MenuHandler {
         this.loanService = loanService;
     }
 
+    // Método de exebição do menu de opções
     public void exibirMenu() {
         while (true) {
             System.out.println("\n--- Gerenciador de biblioteca ---");
@@ -51,6 +52,7 @@ public class MenuHandler {
         }
     }
 
+    // Método que usa do serviço de Book para adicionar um novo livro
     private void adicionarLivro() {
         System.out.print("Digite o título do livro: ");
         String title = scanner.nextLine(); // Aqui já captura o título corretamente
@@ -62,6 +64,7 @@ public class MenuHandler {
         System.out.println("Livro adicionado com sucesso!");
     }
 
+    // Método que usa do serviço de User para adicionar um novo usuário
     private void registrarUsuario() {
         System.out.print("Digite seu nome: ");
         String name = scanner.nextLine();
@@ -73,6 +76,7 @@ public class MenuHandler {
         System.out.println("Usuário registrado com sucesso!");
     }
 
+    // Método que usa do serviço de Loan para emprestar um livro
     private void emprestarLivro() {
         System.out.print("Título do livro que deseja pegar: ");
         String title = scanner.nextLine();
@@ -94,6 +98,7 @@ public class MenuHandler {
         );
     }
 
+    // Método que usa do serviço de Loan para devolver um livro
     private void devolverLivro() {
         System.out.print("Digite o título do livro para devolução: ");
         String title = scanner.nextLine();
@@ -107,11 +112,13 @@ public class MenuHandler {
         );
     }
 
+    // Método que usa do serviço de Book para listar todos os livros
     private void listarTodosLivros() {
         System.out.println("\nLista de Livros:");
         libraryService.getAllBooks().forEach(System.out::println);
     }
 
+    // Método que usa do serviço de Loan para listar todos os emprestimos
     private void listarEmprestimos() {
         System.out.println("\nLista de Empréstimos:");
         loanService.getAllLoans().forEach(System.out::println);

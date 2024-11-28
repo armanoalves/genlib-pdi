@@ -1,5 +1,6 @@
 package models;
 
+// Classe do objeto que representará um usuário
 public class User {
     private String name;
     private String email;

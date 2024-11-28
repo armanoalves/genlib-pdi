@@ -1,5 +1,6 @@
 package models;
 
+// Classe do objeto que representará um livro
 public class Book {
     private String title;
     private String author;

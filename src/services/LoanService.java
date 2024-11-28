@@ -8,9 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+// Classe de serviço para objetos Loan
 public class LoanService {
+    // Lista de Loan(emprestimos) que será usada no gerenciamento
     private final List<Loan> loans = new ArrayList<>();
 
+    // Método de emprestimo de livro
     public void loanBook(Book book, User user) {
         if (book.isAvailable()) {
             book.setAvailable(false);
@@ -22,6 +25,7 @@ public class LoanService {
         }
     }
 
+    // Método de devolução de livro
     public void returnBook(Book book) {
         Optional<Loan> loan = loans.stream()
                 .filter(l -> l.getBook().equals(book))
@@ -37,6 +41,7 @@ public class LoanService {
         }
     }
 
+    // Método que retorna todos os emprestimos feitos
     public List<Loan> getAllLoans() {
         return loans;
     }

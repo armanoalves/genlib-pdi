@@ -2,6 +2,7 @@ package models;
 
 import java.time.LocalDate;
 
+// Classe do objeto que representará um emprestimo
 public class Loan {
     private Book book;
     private User user;
