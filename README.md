@@ -27,8 +27,8 @@ genlib
 │   ├── models
 │   ├── services
 │   └── ui
-│       ├── MenuHandler
-│       └── LibraryManager
+│   |    └──  MenuHandler
+│   └── LibraryManager
 ├── .gitignore
 ├── genlib.iml
 └── README.md
